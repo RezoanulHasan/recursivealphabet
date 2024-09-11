@@ -1,0 +1,70 @@
+.Alphabet {
+  text-align: center;
+}
+
+#outputString {
+  margin: 20px;
+  font-size: 24px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, 50px);
+  grid-gap: 10px;
+  justify-content: center;
+}
+
+.tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.tile:hover {
+  background-color: #e0e0e0;
+}
+
+/*  */
+.Layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.partition {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.vertical .resizable-box {
+  border-right: 1px solid black;
+}
+
+.horizontal .resizable-box {
+  border-bottom: 1px solid black;
+}
+
+.btn {
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.partition-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
