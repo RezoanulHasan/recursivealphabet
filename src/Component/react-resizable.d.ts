@@ -4,6 +4,7 @@ declare module "react-resizable" {
   import { CSSProperties } from "react";
 
   export interface ResizableBoxProps {
+    [x: string]: any;
     width?: number;
     height?: number;
     minConstraints?: [number, number];

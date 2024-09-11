@@ -41,9 +41,13 @@ const AlphabetTileInteraction: React.FC = () => {
         </Link>
       </div>
       <div className="Alphabet    mb-10  mt-20">
-        <h1 className="text-center text-xl font-semibold">Alphabet Tile </h1>
-        <div id="outputString">{outputString}</div>
-        <div className="grid-container">
+        <h1 className="text-center text-2xl font-semibold mb-20 text-blue-600">
+          Test Alphabet Tile{" "}
+        </h1>
+        <div className="mb-20 font-bold  text-3xl    " id="outputString">
+          {outputString}
+        </div>
+        <div className="grid-container mt-10">
           {ALPHABET.split("")?.map((letter) => (
             <div
               key={letter}

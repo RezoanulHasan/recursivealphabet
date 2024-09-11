@@ -1,70 +1,78 @@
 .Alphabet {
-  text-align: center;
-}
-
-#outputString {
-  margin: 20px;
-  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(6, 50px);
-  grid-gap: 10px;
-  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+  gap: 10px;
+  justify-items: center;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .tile {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background-color: #f0f0f0;
-  border: 1px solid #ddd;
-  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
   cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .tile:hover {
-  background-color: #e0e0e0;
+  background-color: #4a90e2;
+  color: white;
 }
 
-/*  Layout  Builder*/
-.Layout {
+.output-string {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/*     Layout builder*/
+.layout-builder {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  width: 100vw;
-}
-
-.partition {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-
-.vertical .resizable-box {
-  border-right: 1px solid black;
-}
-
-.horizontal .resizable-box {
-  border-bottom: 1px solid black;
-}
-
-.btn {
-  margin: 5px;
   padding: 10px;
-  border: none;
-  background-color: white;
-  cursor: pointer;
-  font-size: 16px;
+  box-sizing: border-box;
 }
 
-.partition-content {
+.controls {
+  margin-bottom: 10px;
+}
+
+.controls button {
+  margin-right: 10px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.partitions-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
+  flex: 1;
+  overflow: hidden;
+}
+
+.remove-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 18px;
 }

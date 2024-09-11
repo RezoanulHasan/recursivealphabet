@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/component/react-resizable.d.ts","./src/component/hooks/usetitle.tsx","./src/component/pages/home/alphabettileinteraction.tsx","./src/component/pages/home/home.tsx","./src/component/pages/home/layoutbuilder.tsx","./src/component/shared/container.tsx","./src/component/shared/error/error.tsx"],"version":"5.6.2"}
