@@ -2,12 +2,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 import { useEffect } from "react";
-
 import useTitle from "../../Hooks/useTitle";
-
-import LayoutBuilder from "./LayoutBuilder";
 import Container from "../../Shared/Container";
-
 import AlphabetTileInteraction from "./AlphabetTileInteraction";
 
 const Home = () => {
@@ -20,7 +16,6 @@ const Home = () => {
     <div>
       <Container>
         <AlphabetTileInteraction></AlphabetTileInteraction>
-        <LayoutBuilder></LayoutBuilder>
       </Container>
     </div>
   );

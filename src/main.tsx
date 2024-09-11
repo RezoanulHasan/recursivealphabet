@@ -5,6 +5,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./Component/Pages/Home/Home.tsx";
 import Error from "./Component/Shared/Error/Error.tsx";
+import LayoutBuilder from "./Component/Pages/Home/LayoutBuilder.tsx";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "layout",
+        element: <LayoutBuilder></LayoutBuilder>,
       },
     ],
   },

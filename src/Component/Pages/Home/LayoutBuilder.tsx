@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { ResizableBox } from "react-resizable";
 import "react-resizable/css/styles.css";
-import "./a.css";
+import "./common.css";
 
 type Partition = {
   id: string;

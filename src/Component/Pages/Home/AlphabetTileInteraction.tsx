@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import "./a.css";
+import "./common.css";
+import { Link } from "react-router-dom";
 
 const ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
@@ -31,20 +32,30 @@ const AlphabetTileInteraction: React.FC = () => {
   };
 
   return (
-    <div className="Alphabet   mt-20   mb-10">
-      <div id="outputString">{outputString}</div>
-      <div className="grid-container">
-        {ALPHABET.split("")?.map((letter) => (
-          <div
-            key={letter}
-            className="tile"
-            onClick={() => handleTileClick(letter)}
-          >
-            {letter}
-          </div>
-        ))}
+    <>
+      <div className="text-center flex justify-center ">
+        <Link to="/layout">
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4   text-center flex justify-center rounded">
+            Click here Go to Layout Builder
+          </button>
+        </Link>
       </div>
-    </div>
+      <div className="Alphabet    mb-10  mt-20">
+        <h1 className="text-center text-xl font-semibold">Alphabet Tile </h1>
+        <div id="outputString">{outputString}</div>
+        <div className="grid-container">
+          {ALPHABET.split("")?.map((letter) => (
+            <div
+              key={letter}
+              className="tile"
+              onClick={() => handleTileClick(letter)}
+            >
+              {letter}
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
   );
 };
 
