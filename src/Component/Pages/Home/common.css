@@ -40,39 +40,82 @@
 }
 
 /*     Layout builder*/
+/* Container for the layout builder */
 .layout-builder {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  padding: 10px;
+  width: 100vw;
+  overflow: hidden;
   box-sizing: border-box;
 }
 
+/* Controls section styling */
 .controls {
+  display: flex;
+  justify-content: center;
   margin-bottom: 10px;
 }
 
 .controls button {
-  margin-right: 10px;
+  background-color: #007bff;
+  border: none;
+  color: white;
   padding: 10px;
-  font-size: 16px;
+  margin: 0 5px;
   cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
 }
 
+.controls button:hover {
+  background-color: #0056b3;
+}
+
+/* Container for the partitions */
 .partitions-container {
-  display: flex;
   flex: 1;
+  position: relative;
   overflow: hidden;
 }
 
-.remove-button {
+/* Styling for resizable partitions */
+.react-resizable {
+  position: relative;
+}
+
+.react-resizable-box {
+  border: 1px solid #ccc;
+  overflow: hidden;
+}
+
+.react-resizable-box > .remove-button,
+.react-resizable-box > .split-button {
   position: absolute;
   top: 5px;
-  right: 5px;
-  background: rgba(255, 255, 255, 0.7);
+  background-color: rgba(0, 0, 0, 0.3);
   border: none;
-  border-radius: 50%;
+  color: white;
   cursor: pointer;
   padding: 5px;
-  font-size: 18px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.remove-button {
+  right: 40px;
+  background-color: red;
+}
+
+.remove-button:hover {
+  background-color: darkred;
+}
+
+.split-button {
+  right: 5px;
+  top: 5px;
+}
+
+.split-button:nth-of-type(2) {
+  right: 50px;
 }
